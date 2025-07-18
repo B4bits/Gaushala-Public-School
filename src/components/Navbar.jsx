@@ -1,40 +1,81 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaSchool } from "react-icons/fa";
+import { FaSchool, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Navigation links array for convenience
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About Us" },
+    { to: "/academics", label: "Academics" },
+    { to: "/admissions", label: "Admissions" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/events-news", label: "Events & News" },
+    { to: "/contact", label: "Contact Us" },
+  ];
+
   return (
-    <nav className="sticky top-0 bg-white shadow z-40">
-      <div className="container mx-auto flex items-center justify-between py-4 px-2 md:px-0">
-        <Link to="/" className="flex items-center space-x-2">
+    <nav className="bg-white shadow sticky top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between p-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-2 text-green-700 font-bold text-lg">
           <FaSchool className="text-primary text-2xl" />
-          <span className="font-bold text-lg text-green-600">
-            Gaushala Public School
-          </span>
+          <span>Gaushala Public School</span>
         </Link>
-        <div className="space-x-3 hidden md:block">
-          <NavLink to="/" className="nav-link">
-            Home
-          </NavLink>
-          <NavLink to="/about" className="nav-link">
-            About Us
-          </NavLink>
-          <NavLink to="/academics" className="nav-link">
-            Academics
-          </NavLink>
-          <NavLink to="/admissions" className="nav-link">
-            Admissions
-          </NavLink>
-          <NavLink to="/gallery" className="nav-link">
-            Gallery
-          </NavLink>
-          <NavLink to="/events-news" className="nav-link">
-            Events & News
-          </NavLink>
-          <NavLink to="/contact" className="nav-link">
-            Contact Us
-          </NavLink>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6">
+          {navLinks.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `font-medium text-gray-700 hover:text-secondary transition ${
+                  isActive ? "text-secondary font-bold" : ""
+                }`
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </NavLink>
+          ))}
         </div>
+
+        {/* Hamburger Button (Mobile) */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden p-2 rounded focus:outline-none focus:ring"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Menu Drawer */}
+      {menuOpen && (
+        <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
+          <div className="flex flex-col space-y-4 p-4">
+            {navLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `block font-medium text-gray-700 hover:text-secondary transition ${
+                    isActive ? "text-secondary font-bold" : ""
+                  }`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
