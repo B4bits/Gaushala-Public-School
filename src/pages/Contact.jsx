@@ -74,11 +74,13 @@ export default function Contact() {
        <iframe
   width="600"
   height="450"
+  frameborder="0"
   style="border:0"
-  loading="lazy"
-  allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?AIzaSyAVeBrH0ZhQbBDFi1HcrDtDHeKOgyqI2nU">
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVeBrH0ZhQbBDFi1HcrDtDHeKOgyqI2nU&q=https://www.google.com/maps/place/Gaushala+Public+School/@26.9169567,85.7799284,871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39ec6f0015d8cbad:0xc726e4b8b602b273!8m2!3d26.9169519!4d85.7825033!16s%2Fg%2F11ld9y9jp9?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+  allowfullscreen>
 </iframe>
+
 
       </div>
     </section>
