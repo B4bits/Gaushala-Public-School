@@ -71,7 +71,13 @@ export default function Contact() {
         <div>contact@gpschool.edu</div>
         <div className="font-semibold mt-3">Phone:</div>
         <div>+91-90000-90000</div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.5758904468344!2d85.77763237477727!3d26.91695181642425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ec6f0015d8cbad%3A0xc726e4b8b602b273!2sGaushala%20Public%20School!5e0!3m2!1sen!2sin!4v1753098130752!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..." // Update with school's map location
+          className="w-full h-64 rounded mt-6"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Maps Location"
+        />
       </div>
     </section>
   );
