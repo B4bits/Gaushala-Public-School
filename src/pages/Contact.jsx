@@ -6,10 +6,10 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-      "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-      "YOUR_TEMPLATE_ID", // Replace with your template ID
+      "YOUR_SERVICE_ID",      // Replace with your EmailJS service ID
+      "YOUR_TEMPLATE_ID",     // Replace with your template ID
       form.current,
-      "YOUR_USER_ID" // Replace with your EmailJS user/public key
+      "YOUR_USER_ID"          // Replace with your EmailJS user/public key
     );
     e.target.reset();
     alert("Message sent!");
@@ -71,17 +71,13 @@ export default function Contact() {
         <div>contact@gpschool.edu</div>
         <div className="font-semibold mt-3">Phone:</div>
         <div>+91-90000-90000</div>
-       <iframe
-  width="600"
-  height="450"
-  frameborder="0"
-  style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVeBrH0ZhQbBDFi1HcrDtDHeKOgyqI2nU&q=https://www.google.com/maps/place/Gaushala+Public+School/@26.9169567,85.7799284,871m/data=!3m2!1e3!4b1!4m6!3m5!1s0x39ec6f0015d8cbad:0xc726e4b8b602b273!8m2!3d26.9169519!4d85.7825033!16s%2Fg%2F11ld9y9jp9?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
-  allowfullscreen>
-</iframe>
-
-
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..." // Update with school's map location
+          className="w-full h-64 rounded mt-6"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Maps Location"
+        />
       </div>
     </section>
   );
