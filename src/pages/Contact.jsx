@@ -72,7 +72,7 @@ export default function Contact() {
         <div className="font-semibold mt-3">Phone:</div>
         <div>+91-90000-90000</div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!..." // Update with school's map location
+          src="https://www.google.com/maps/place/Gaushala+Public+School/@26.916832,85.7824997,19.55z/data=!4m6!3m5!1s0x39ec6f0015d8cbad:0xc726e4b8b602b273!8m2!3d26.9169519!4d85.7825033!16s%2Fg%2F11ld9y9jp9?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" // Update with school's map location
           className="w-full h-64 rounded mt-6"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
