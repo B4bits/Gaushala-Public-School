@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import heroImg from "../assets/hero.jpg";
 import activitiesImg from "../assets/SchoolActivities.jpg";
 import teachersPhoto from "../assets/teachers-group.jpg";
-import activitiesImg from "../assets/playground.jpg";
 
 export default function Home() {
   return (
