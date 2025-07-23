@@ -7,11 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-       primary: "#206040",      // Deep Green
-        accent: "#f9dbbb",       // Sand
-        secondary: "#343a40",    // Charcoal Gray
-        background: "#f7f3ee",   // Cream
-        cta: "#f26a3e",          // Burnt Orange (for important buttons)
+        primary: "#3f51b5",      // Indigo (trust, expertise)
+        accent: "#4fc3f7",       // Sky Blue (friendly highlights)
+        secondary: "#273143",    // Slate Gray (subtle contrast)
+        background: "#f4f6f8",   // Soft Cool Gray (clean background)
+        success: "#10b981",      // Emerald (positive highlights)
       },
     },
     fontFamily: {
