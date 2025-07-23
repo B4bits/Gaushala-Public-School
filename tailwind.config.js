@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#7C3AED",    // Royal Purple
-        accent: "#F59E42",     // Vibrant Orange
-        secondary: "#14B8A6",  // Teal
-        background: "#F8FAFC", // Soft Gray
+        primary: "#9ECAD6",    // Royal Purple
+        accent: "#748DAE",     // Vibrant Orange
+        secondary: "#F5CBCB",  // Teal
+        background: "#FFEAEA", // Soft Gray
       },
     },
     fontFamily: {
